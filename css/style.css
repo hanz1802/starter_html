@@ -1,19 +1,4 @@
-/* body {
-	background-color: #2C3E50;
-	color:#ECF0F1;
-	font-family: Arial, Helvetica, sans-serif;
-}
-h1{
-   font-size: 25px;
-   font-family:'Times New Roman', Times, serif;
-   text-align: center;
-
-}
-h2, h3 {
-   font-size: 22px; 
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: #b0aeba; 
- }
+/* 
 
 p{
    line-height: 2;
@@ -24,27 +9,23 @@ img{
    margin: 20px;
    border-top-right-radius : 30px
 }
-
-li{
-   display: inline-block;
-   margin-left: 50px;
-} */
+ */
 
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f8f8f8;
   color: #333;
 }
-
+p{
+  line-height: 2;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #306998;  /* Python blue */
+  background-color: #1e6eaf;  /* Python blue */
 }
 
 nav li {
@@ -53,17 +34,19 @@ nav li {
 
 nav li a {
   display: block;
-  color: #FFD43B;  /* Python yellow */
+  color: #FFFF00;  /* Python yellow */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-nav li a:hover {
-  background-color: #FFD43B;  /* Python yellow */
+nav li a:hover, nav li a:focus {
+  background-color: #FFFF00;  /* Python yellow */
   color: #306998;  /* Python blue */
 }
-
+*:focus{
+  text-decoration: underline;
+}
 .skip a{
   position:absolute;
   top: -40px;
@@ -71,11 +54,19 @@ nav li a:hover {
 
 .skip a:focus{
   position:absolute;
-  top: 20px;
+  top: 50px;
 }
 
-h1, h2, h3 {
-  color: #306998;  /* Python blue */
+h1{
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  color: #306998;
+}
+h2, h3 {
+  font-size: 22px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #306998; 
 }
 
 main {
@@ -87,12 +78,34 @@ img, video {
   height: auto;
 }
 
+.container{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  justify-content: space-around;
+  justify-items: stretch;
+  background-color: #778898;
+}
+.container > div{
+  background-color:#f5f5f5;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  padding: 5px;
+}
 @media only screen and (max-width: 600px) {
   nav li {
       float: none;
       width: 100%;
   }
-
+  .container{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;  /*Set grid in center*/
+    grid-template-columns: 0.9fr; 
+    
+    
+    row-gap:10px;
+  }
   h1 {
       font-size: 24px;
   }
@@ -103,5 +116,16 @@ img, video {
 
   p {
       font-size: 16px;
+      line-height: 1;
   }
+}
+@media screen and (prefers-reduced-motion: reduce){
+  .gif{
+    display: none;
+  }
+
+  /* .static{
+    display: block;
+  } */
+  
 }
