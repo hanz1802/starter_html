@@ -19,6 +19,7 @@ body {
 }
 p{
   line-height: 2;
+  font-size: 16px;
 }
 nav ul {
   list-style-type: none;
@@ -44,6 +45,13 @@ nav li a:hover, nav li a:focus {
   background-color: #FFFF00;  /* Python yellow */
   color: #306998;  /* Python blue */
 }
+/* nav li a:visited {
+  display: block;
+  color: #778898;  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
 *:focus{
   text-decoration: underline;
 }
@@ -76,6 +84,9 @@ main {
 img, video {
   max-width: 100%;
   height: auto;
+  border: 2px solid #778898;
+  padding: 10px;
+  margin: 20px 0px;
 }
 
 .container{
@@ -92,6 +103,28 @@ img, video {
   border-radius: 20px;
   padding: 5px;
 }
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap:5px;
+  column-gap:2px;
+  align-items: baseline;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+/* .grid-container img{
+  max-width:100%;
+  overflow:auto;
+  border:none;
+}
+
+.grid-container video{
+  max-width:100%;
+  overflow:auto;
+  margin-top:3%;
+} */
 @media only screen and (max-width: 600px) {
   nav li {
       float: none;
@@ -102,20 +135,23 @@ img, video {
     width: 90%;
     margin: 0 auto;  /*Set grid in center*/
     grid-template-columns: 0.9fr; 
-    
-    
     row-gap:10px;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap:5px;
   }
   h1 {
       font-size: 24px;
   }
 
-  h2 {
+  h2,h3 {
       font-size: 20px;
   }
 
   p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1;
   }
 }
